@@ -1,5 +1,9 @@
 package basic;
 
+import com.sun.rowset.internal.Row;
+
+import java.util.Arrays;
+
 public class RowSum {
     public int[][] solution(int[][] arr1, int[][] arr2) {
         int[][] answer = {};
@@ -12,6 +16,16 @@ public class RowSum {
             }
         }
 
+        System.out.println(answer);
+        Arrays.stream(answer).forEach(System.out::print);
+
         return answer;
+    }
+
+    public static void main(String[] args) {
+        int[][] a = {{1,2},{3,4}};
+        int[][] b = {{1,2},{3,4}};
+
+        new RowSum().solution(a,b);
     }
 }

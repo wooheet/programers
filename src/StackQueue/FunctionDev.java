@@ -56,6 +56,7 @@ public class FunctionDev {
             dayOfend[day]++;
         }
         return Arrays.stream(dayOfend).filter(i -> i!=0).toArray();
+
     }
 
     public static void main(String[] args) {

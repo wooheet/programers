@@ -1,5 +1,10 @@
 package basic;
 
+import java.util.Arrays;
+
+/*
+소수찾기
+ */
 public class Errtostenez {
     public static int[] solution(int num) {
         int[] answer = new int[num];
@@ -17,14 +22,13 @@ public class Errtostenez {
             }
         }
 
-        for (int i = 0; i < primes; i++) {
-            System.out.println(answer[i]);
-        }
         return answer;
     }
 
     public static void main(String[] args) {
         int num = 10;
-        new Errtostenez().solution(num);
+        int[] result = new Errtostenez().solution(num);
+
+        Arrays.stream(result).forEach(r -> System.out.print(r));
     }
 }

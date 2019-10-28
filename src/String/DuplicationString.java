@@ -1,6 +1,7 @@
-package basic;
+package String;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * [중복이없는가]
@@ -20,11 +21,13 @@ public class DuplicationString {
 
     /* main */
     public static void main(String[] args) {
-
-        System.out.println(checkDuplicationA("abcdefg"));  // false
-        System.out.println(checkDuplicationA("abcdefga")); // true
-        System.out.println(checkDuplicationB("abcdefg"));  // false
-        System.out.println(checkDuplicationB("abcdefga")); // true
+//
+//        System.out.println(checkDuplicationA("abcdefg"));  // false
+//        System.out.println(checkDuplicationA("abcdefga")); // true
+//        System.out.println(checkDuplicationB("abcdefg"));  // false
+//        System.out.println(checkDuplicationB("abcdefga")); // true
+        System.out.println(checkDuplicationC("abcdefga")); // true
+        System.out.println(checkDuplicationC("abcdefg")); // false
     }
 
     /* ASCII 가정시 플래그값으로 푸는 방법  */
@@ -55,6 +58,25 @@ public class DuplicationString {
                 return true;
             }
         }
+        return false;
+    }
+
+    /* Hash 중복제거 방법 */
+    static boolean checkDuplicationC(String str) {
+
+        // == split ==
+        String[] strings = str.split("");
+
+        // HashSet
+
+        HashSet<String> hs = new HashSet<>();
+
+        for (String s : strings) {
+            hs.add(s);
+        }
+
+        if (str.length() != hs.size()) return true;
+
         return false;
     }
 

@@ -32,7 +32,7 @@ public class Printer {
         while(!priority.isEmpty()){
             for(int i=0; i<priorities.length; i++){
                 if(priorities[i] == (int)priority.peek()) {
-                    if(i == location){
+                    if (i == location){
                         return answer;
                     }
                     priority.poll();
@@ -40,8 +40,6 @@ public class Printer {
                 }
             }
         }
-
-        System.out.println(answer);
         return answer;
     }
 
@@ -49,7 +47,8 @@ public class Printer {
         int[] priorities = new int[] {1, 1, 9, 1, 1, 1};
         int location = 0;
 
-        new Printer().solution(priorities, location);
+        int t = new Printer().solution(priorities, location);
+        System.out.println(t);
     }
 
 }

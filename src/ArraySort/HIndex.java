@@ -19,9 +19,14 @@ public class HIndex {
         Arrays.sort(citations);
         for (int i = 0; i < citations.length; i++) {
             int smaller = Math.min(citations[i], citations.length - i);
+            //0,6
+            //1,5
+            //1,4
+            //4,3
+            //6,2
+            //7,1
             answer = Math.max(answer, smaller);
         }
-
         return answer;
     }
 

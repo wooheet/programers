@@ -36,7 +36,6 @@ public class MoreHot {
             int a = heap.poll();
             int b = heap.poll();
 
-
             int result = a + (b * 2);
 
             heap.offer(result);
